@@ -10,12 +10,9 @@ st.markdown(
 
 uploaded_file = st.file_uploader("CSV Uploader", type=['csv'])
 if uploaded_file is not None:
-  if uploaded_file.type is not '.csv':
-    st.error("Invalid file type", icon='🚨')
-  else:
-    df = pd.read_csv(uploaded_file)
-    st.map(df)
-    st.dataframe(df)
-    if 'dataframe' not in st.session_state:
-      st.session_state.dataframe = df
+  df = pd.read_csv(uploaded_file)
+  st.map(df)
+  st.dataframe(df)
+  if 'dataframe' not in st.session_state:
+    st.session_state.dataframe = df
       
