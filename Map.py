@@ -8,7 +8,7 @@ st.markdown(
   """
 )
 
-uploaded_file = file_uploader("CSV Uploader", key=uploadedfile, type=['csv'])
+uploaded_file = st.file_uploader("CSV Uploader", key=uploadedfile, type=['csv'])
 if uploaded_file is not None:
   if uploaded_file.type is not 'csv':
     st.error("Invalid file type", icon='🚨')
