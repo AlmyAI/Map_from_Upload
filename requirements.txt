@@ -32,3 +32,6 @@ duckduckgo-search
 openai_function_call
 extra-streamlit-components
 bcrypt
+streamlit-elements
+streamlit-extras
+extra-streamlit-components
