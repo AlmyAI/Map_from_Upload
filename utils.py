@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as c
 from streamlit_elements import elements, mui, html
 from pandas.api.types import (is_categorical_dtype, is_datetime64_any_dtype, is_numeric_dtype, is_object_dtype,)
+import pandas as pd
 
 def set_title(varTitle, varSubtitle):
   st.markdown(f"""# {varTitle} <span style=color:#7ab3ba><font size=5>{varSubtitle}</font></span>""",unsafe_allow_html=True)
