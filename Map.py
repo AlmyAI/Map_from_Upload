@@ -18,17 +18,17 @@ with main_container:
   st.divider()
 
   tab_all, tab_accent, tab_harmony, tab_duo = st.tabs(["All", "Accent", "Harmony", "Duo"])
-    with tab_all:
-      st.header("All Devices")
+  with tab_all:
+    st.header("All Devices")
 
-    with tab_accent:
-      st.header("Accent")
+  with tab_accent:
+    st.header("Accent")
 
-    with tab_harmony:
-      st.header("Harmony")
+  with tab_harmony:
+    st.header("Harmony")
 
-    with tab_duo:
-      st.header("Duo")
+  with tab_duo:
+    st.header("Duo")
 
 uploaded_file = st.file_uploader("CSV Uploader", type=['csv'])
 if uploaded_file is not None:
