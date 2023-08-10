@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
-from utils import set_title
+from utils import set_title, set_instructions
 
 
 set_title("Alma Clinical", "Hot Map")
+set_instructions()
 
 
 uploaded_file = st.file_uploader("CSV Uploader", type=['csv'])
