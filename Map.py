@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils import set_title, set_instructions
+from utils import set_title, set_instructions, get_dataframe_filtered
 
 
 set_title("Alma Clinical", "Hot Map")
@@ -20,7 +20,11 @@ with main_container:
   tab_all, tab_accent, tab_harmony, tab_duo = st.tabs(["All", "Accent", "Harmony", "Duo"])
   with tab_all:
     st.header("All Devices")
-
+    with st.expander("Map"):
+      st.write("Map")
+    with st.expander("Data - All Devices"):
+      st.dataframe(get_dataframe_filtered('accent_prime'))
+                   
   with tab_accent:
     st.header("Accent")
 
