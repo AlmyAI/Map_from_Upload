@@ -1,15 +1,10 @@
 import streamlit as st
 import pandas as pd
-import streamlit.components.v1 as c
-from streamlit_elements import elements, mui
+from utils import set_title
 
 
+set_title("Alma Clinical", "Hot Map")
 
-st.title("Map from File")
-st.markdown(
-  """Upload a **.csv** file that contains **columns named longitude and latitude** and a map will be displayed.
-  """
-)
 
 uploaded_file = st.file_uploader("CSV Uploader", type=['csv'])
 if uploaded_file is not None:
